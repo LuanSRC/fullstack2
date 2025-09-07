@@ -25,7 +25,7 @@ const Car = db.define('car', {
         allowNull: false,
     },
     transmition:{
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
     },
     price:{
