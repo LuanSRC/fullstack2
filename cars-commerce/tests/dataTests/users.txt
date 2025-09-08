@@ -1,0 +1,70 @@
+{
+  "name": "Ana Paula Souza",
+  "email": "ana.souza@example.com",
+  "CPF": "123.456.789-09",
+  "location": "São Paulo - SP",
+  "password": "Senha@123"
+}
+{
+  "name": "Carlos Eduardo Lima",
+  "email": "carlos.lima@example.com",
+  "CPF": "987.654.321-00",
+  "location": "Belo Horizonte - MG",
+  "password": "Teste#2024"
+}
+{
+  "name": "Fernanda Oliveira",
+  "email": "fernanda.oliveira@example.com",
+  "CPF": "321.654.987-12",
+  "location": "Rio de Janeiro - RJ",
+  "password": "Brasil!2025"
+}
+{
+  "name": "João Henrique Pereira",
+  "email": "joao.pereira@example.com",
+  "CPF": "456.789.123-45",
+  "location": "Curitiba - PR",
+  "password": "Curitiba#89"
+}
+{
+  "name": "Mariana Costa",
+  "email": "mariana.costa@example.com",
+  "CPF": "741.852.963-00",
+  "location": "Porto Alegre - RS",
+  "password": "Porto2025@"
+}
+{
+  "name": "Ricardo Alves",
+  "email": "ricardo.alves@example.com",
+  "CPF": "852.369.741-55",
+  "location": "Fortaleza - CE",
+  "password": "For@1234"
+}
+{
+  "name": "Patrícia Mendes",
+  "email": "patricia.mendes@example.com",
+  "CPF": "159.753.486-20",
+  "location": "Salvador - BA",
+  "password": "Teste#Senha"
+}
+{
+  "name": "Gabriel Martins",
+  "email": "gabriel.martins@example.com",
+  "CPF": "258.147.369-11",
+  "location": "Brasília - DF",
+  "password": "DF2025#"
+}
+{
+  "name": "Juliana Rocha",
+  "email": "juliana.rocha@example.com",
+  "CPF": "963.258.741-33",
+  "location": "Recife - PE",
+  "password": "Recife!01"
+}
+{
+  "name": "Felipe Nogueira",
+  "email": "felipe.nogueira@example.com",
+  "CPF": "369.147.258-44",
+  "location": "Manaus - AM",
+  "password": "Manaus2025*"
+}
