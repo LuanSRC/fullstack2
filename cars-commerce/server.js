@@ -1,7 +1,6 @@
 const express = require('express')
 const db = require('./db/db')
 const carsRoutes = require('./routes/carsRoutes')
-const Car = require('./models/car')
 const PORT = 3000
 
 const app = express()
