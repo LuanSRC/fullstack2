@@ -1,7 +1,6 @@
 const User = require("../models/UserModel.js");
 
 class UserController {
-  // GET /users
   async index(req, res) {
     try {
       const users = await User.findAll({
@@ -13,19 +12,14 @@ class UserController {
     }
   }
 
-  // POST /users
   async store(req, res) {
     try {
       let { name, email, password, role } = req.body;
-
-      // validação mínima de obrigatórios
       if (!name || !email || !password) {
         return res.status(400).json({
           message: "Missing required fields: name, email, password",
         });
       }
-
-      // normalização/validação opcional de role (se fornecido)
       if (role !== undefined) {
         if (typeof role === "string") {
           role = role.trim().toLowerCase();
@@ -37,19 +31,14 @@ class UserController {
             .json({ message: "Invalid role. Allowed: user, admin" });
         }
       }
-
       const created = await User.create({ name, email, password, role });
-
       const { password: _pw, ...safe } = created.get({ plain: true });
-      // Opcional: Location com a rota do recurso criado
       res.setHeader("Location", `/users/${safe.id}`);
       return res.status(201).json(safe);
     } catch (err) {
-      // violação de unicidade (email)
       if (err?.name === "SequelizeUniqueConstraintError") {
         return res.status(409).json({ message: "Email already in use" });
       }
-      // validação do Sequelize
       if (err?.name === "SequelizeValidationError") {
         return res.status(400).json({
           message: "Validation error",
@@ -60,7 +49,6 @@ class UserController {
     }
   }
 
-  // GET /users/:id
   async show(req, res) {
     try {
       const id = Number.parseInt(req.params.id, 10);
@@ -80,7 +68,6 @@ class UserController {
     }
   }
 
-  // PUT/PATCH /users/:id
   async update(req, res) {
     try {
       const id = Number.parseInt(req.params.id, 10);
@@ -95,7 +82,6 @@ class UserController {
         return res.status(404).json({ message: "User not found" });
       }
 
-      // normalização/validação de role se vier no body
       if (role !== undefined) {
         if (typeof role === "string") {
           role = role.trim().toLowerCase();
@@ -108,7 +94,7 @@ class UserController {
         }
       }
 
-      // atualiza apenas campos fornecidos (inclusive role)
+      // atualiza apenas campos fornecidos
       if (name !== undefined) user.name = name;
       if (email !== undefined) user.email = email;
       if (password !== undefined) user.password = password;
@@ -132,7 +118,6 @@ class UserController {
     }
   }
 
-  // DELETE /users/:id
   async delete(req, res) {
     try {
       const id = Number.parseInt(req.params.id, 10);
